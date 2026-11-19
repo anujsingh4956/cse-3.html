@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+            font-size: 16px;
+        }
+
+        .form-container {
+            max-width: 720px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .row {
+            margin-bottom: 6px;
+        }
+
+        .row label {
+            display: inline-block;
+            text-align: right;
+            margin-right: 6px;
+        }
+
+        .row input[type="text"],
+        .row input[type="password"],
+        .row input[type="email"],
+        .row input[type="date"],
+        .row input[type="number"],
+        .row input[type="url"],
+        .row input[type="file"],
+        .row select {
+            height: 22px;
+            border: 1px solid #888888;
+            padding: 1px 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+        }
+
+        .row input[type="text"],
+        .row input[type="password"],
+        .row input[type="email"] {
+            width: 195px;
+        }
+
+        .row input[type="date"] {
+            width: 118px;
+            font-size: 13px;
+        }
+
+        .row input[type="number"],
+        .row input[type="url"] {
+            width: 165px;
+        }
+
+        .row input[type="file"] {
+            width: 155px;
+            font-size: 12px;
+        }
+
+        .row select {
+            width: 135px;
+        }
+
+        .inline-group {
+            display: inline-block;
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .inline-group label {
+            display: inline;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .inline-group input[type="radio"],
+        .inline-group input[type="checkbox"] {
+            vertical-align: middle;
+            margin: 0 3px 0 0;
+        }
+
+        .btn-row {
+            margin-top: 8px;
+            padding-left: 75px;
+        }
+
+        .btn-row button {
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            padding: 2px 8px;
+            border: 1px solid #888888;
+            background-color: #efefef;
+            margin: 0 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <form class="form-container">
+        <div class="row">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter the name">
+        </div>
+
+        <div class="row">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter the password">
+        </div>
+
+        <div class="row">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter the Email">
+        </div>
+
+        <div class="row">
+            <div class="inline-group">
+                <span>Gender:</span>
+                <label><input type="radio" name="gender" value="male">Male</label>
+                <label><input type="radio" name="gender" value="female">Female</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="inline-group">
+                <span>Hobbies</span>
+                <label><input type="checkbox" name="hobbies" value="cricket">Cricket</label>
+                <label><input type="checkbox" name="hobbies" value="carrom">carrom</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <select id="language" name="language" aria-label="Select a language">
+                <option value="" selected disabled>Select a language</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="row">
+            <label for="attempt">Attempt</label>
+            <input type="number" id="attempt" name="attempt" step="1" min="0" max="10">
+        </div>
+
+        <div class="row">
+            <label for="url">URL</label>
+            <input type="url" id="url" name="url">
+        </div>
+
+        <div class="row">
+            <label for="resume">Upload Your Resume</label>
+            <input type="file" id="resume" name="resume">
+        </div>
+
+        <div class="btn-row">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+
+</body>
+</html>
